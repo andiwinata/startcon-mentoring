@@ -5,3 +5,7 @@
 #profile-summary {
     overflow: auto;
 }
+
+.badge-img {
+  margin-right: 10px;
+}
