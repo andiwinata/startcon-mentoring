@@ -9,3 +9,53 @@
 .badge-img {
   margin-right: 10px;
 }
+
+.request-table tr {
+    line-height: 40px;
+}
+
+.tutor-request {
+    border: 3px solid rgba(0,0,0,0);
+    padding: 5px 0;
+}
+
+.tutor-request:hover {
+    border: 3px solid #d34615;
+}
+
+/*TODO*/
+
+.draw {
+  transition: color 0.25s;
+  
+}
+.draw::before, .draw::after {
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+.draw::before {
+  top: 0;
+  left: 0;
+}
+.draw::after {
+  bottom: 0;
+  right: 0;
+}
+.draw:hover {
+  color: #d34615;
+}
+.draw:hover::before, .draw:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.draw:hover::before {
+  border-top-color: #d34615;
+  border-right-color: #d34615;
+  transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+.draw:hover::after {
+  border-bottom-color: #d34615;
+  border-left-color: #d34615;
+  transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+}
