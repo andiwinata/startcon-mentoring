@@ -32,7 +32,7 @@
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Calendar</a></li>
-                    <li role="presentation"><a href="./tutor-requests.html">Requests <span class="badge">7</span></a></li>
+                    <li role="presentation" id="requests-button"><a href="./tutor-requests.html">Requests <span class="badge">7</span></a></li>
                     <li class="dropdown">
                         <a href="./tutor-profile.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -129,5 +129,27 @@
         </div>
     </div>
 </body>
+<script>
+    function getParameterByName(name, url) {
+        if (!url) {
+        url = window.location.href;
+        }
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    // get parameter
+    var isStudent = getParameterByName("isStudent");
+
+    // if student, hide the requests button
+    if (isStudent == "true") {
+        var element = document.getElementById("requests-button");
+        element.parentNode.removeChild(element);
+    }
+</script>
 
 </html>
