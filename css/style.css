@@ -15,18 +15,19 @@
 }
 
 .tutor-request {
-    border: 3px solid rgba(0,0,0,0);
+    transition: all 0.5s ease;
+    background-color: #ffffff;
     padding: 5px 0;
 }
 
 .tutor-request:hover {
-    border: 3px solid #d34615;
+    background-color: #dddddd;
 }
 
 /*TODO*/
-
+/*
 .draw {
-  transition: color 0.25s;
+  transition: all 0.25s;
   
 }
 .draw::before, .draw::after {
@@ -58,4 +59,4 @@
   border-bottom-color: #d34615;
   border-left-color: #d34615;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
-}
+}*/
