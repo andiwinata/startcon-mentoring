@@ -24,6 +24,14 @@
     background-color: #dddddd;
 }
 
+.logo {
+    width: 100px;
+    height: 30px;
+}
+
+.navbar-brand {
+  padding: 10px;
+}
 /*TODO*/
 /*
 .draw {
